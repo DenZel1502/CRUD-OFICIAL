@@ -1,0 +1,4 @@
+com\app\mongodb\CrudMongodbApplication.class
+com\app\mongodb\controller\ProductoController.class
+com\app\mongodb\repo\ProductoRepository.class
+com\app\mongodb\model\Producto.class
