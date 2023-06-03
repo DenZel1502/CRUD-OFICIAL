@@ -1,0 +1,66 @@
+<body>
+    <app-navmenu></app-navmenu>
+    <div class="container py-5">
+  
+      <div class="rouded shadow p-5 d-flex">
+        <div class="container px-5" >
+          <h3>Clientes</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">DNI</th>
+                <th scope="col">Fecha-Nacimiento</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+          <tbody>
+            <tr *ngFor="let cliente of clientes ">
+              <td>{{cliente.nombre}}</td>
+              <td>{{cliente.apellido}}</td>
+              <td>{{cliente.dni}}</td>
+              <td>{{cliente.fec_nac}}</td>
+              <td>
+                          <i class="fa fa-edit cursor-pointer" title="Editar cliente "  ></i>
+                          <i class="fa fa-trash ms-2 cursor-pointer" title="Eliminar cliente" ></i> 
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+        </div> 
+      </div>
+  
+      <div class="rouded shadow p-5 d-flex">
+        <div class="container px-5" >
+        <h3> Cliente</h3>
+        <form class="mt-5" >
+          <div class="mb-3 form-floating">
+            <input type="text" id="nombre" placeholder="nombre" name="nombre" class="form-control" >
+            <label>Nombres</label>
+          </div>
+          <div class="mb-3 form-floating">
+            <input type="text" id="apellido" placeholder="apellido" name="apellido" class="form-control" >
+            <label >Apellidos</label>
+          </div>
+          <div class="mb-3 form-floating">
+            <input type="number" id="dni" placeholder="dni" name="dni" class="form-control" >
+            <label >DNI</label>
+          </div>
+          <div class="mb-3 form-floating">
+            <input type="text" id="fec_nac" placeholder="fec_nac" name="fec_nac" class="form-control" >
+            <label >Fecha-Nacimiento</label>
+          </div>
+  
+  
+          <div class="text-end">
+            <button class="btn btn-outline-primary">Guardar</button>
+          </div>
+        </form>
+        </div>
+      </div>
+  
+    </div>
+  </body>
+

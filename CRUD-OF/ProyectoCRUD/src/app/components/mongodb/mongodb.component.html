@@ -1,0 +1,65 @@
+<body>
+  <div class="container py-5 ">
+    <div class="rouded shadow p-5 d-flex" id="card">
+      <div class="container px-5"  >
+        <span class="titulo">Listado de Productos</span>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Nombre</th>
+              <th scope="col">Categoria</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Stock</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+        <tbody>
+          <tr *ngFor="let producto of productos">
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.categoria}}</td>
+            <td>S/.{{producto.precio}}</td>
+            <td>{{producto.stock}} unid.</td>
+            <td>
+                        <i class="fa fa-edit cursor-pointer text-success" title="Editar producto " (click)="edit(producto)" ></i>
+                        <i class="fa fa-trash ms-2 cursor-pointer text-danger" title="Eliminar producto" (click)="delete(producto)"></i> 
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+      </div> 
+    </div>
+
+    <div class="rouded shadow p-5 d-flex mt-5" id="card">
+      <div class="container px-5" >
+      <samp class="titulo">{{ producto.id ? 'Editar' : 'Nuevo'}} Producto</samp>
+      <form class="mt-5" (ngSubmit)="save()">
+        <div class="mb-3 form-floating">
+          <input type="text" id="categoria" placeholder="Categoria" name="categoria" class="form-control" [(ngModel)]="producto.categoria">
+          <label>Categoria</label>
+        </div>
+        <div class="mb-3 form-floating">
+          <input type="text" id="nombre" placeholder="Nombre" name="nombre" class="form-control" [(ngModel)]="producto.nombre">
+          <label >Nombre</label>
+        </div>
+        <div class="mb-3 form-floating">
+          <input type="number" id="precio" placeholder="precio" name="precio" class="form-control" [(ngModel)]="producto.precio">
+          <label >Precio</label>
+        </div>
+        <div class="mb-3 form-floating">
+          <input type="number" id="stock" placeholder="stock" name="stock" class="form-control" [(ngModel)]="producto.stock">
+          <label >Stock</label>
+        </div>
+
+
+        <div class="text-end">
+          <button class="btn btn-outline-primary">Guardar</button>
+        </div>
+      </form>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+

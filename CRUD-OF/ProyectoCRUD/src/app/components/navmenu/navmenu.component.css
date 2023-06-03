@@ -1,0 +1,24 @@
+.active-linkM {
+    background-color: rgb(51, 150, 27, 0.5);
+}
+
+.active-linkM a {
+    color: black;
+}
+
+
+.active-linkS {
+    background-color: rgba(27, 111, 150, 0.5);
+}
+
+.active-linkS a {
+    color: black;
+}
+
+.active-linkI {
+    background-color: rgba(241, 237, 0, 0.5);
+}
+
+.active-linkI a {
+    color: black;
+}
